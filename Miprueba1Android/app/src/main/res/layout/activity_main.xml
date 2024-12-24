@@ -1,0 +1,111 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Imagen y nombre del plato 1 -->
+
+    <ImageView
+        android:id="@+id/imgDish1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/imagen2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvDish1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pastel de Choclo"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/imgDish1"
+        app:layout_constraintStart_toEndOf="@id/imgDish1"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/etDish1Qty"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="0"
+        app:layout_constraintTop_toBottomOf="@id/tvDish1"
+        app:layout_constraintStart_toStartOf="@id/tvDish1"
+        android:layout_marginTop="8dp" />
+
+    <!-- Imagen y nombre del plato 2 -->
+
+    <ImageView
+        android:id="@+id/imgDish2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/imagen1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgDish1" />
+
+    <TextView
+        android:id="@+id/tvDish2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cazuela"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/imgDish2"
+        app:layout_constraintStart_toEndOf="@id/imgDish2"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/etDish2Qty"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="0"
+        app:layout_constraintTop_toBottomOf="@id/tvDish2"
+        app:layout_constraintStart_toStartOf="@id/tvDish2"
+        android:layout_marginTop="8dp" />
+
+    <!-- Switch para propina -->
+    <Switch
+        android:id="@+id/swTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incluir propina"
+        app:layout_constraintTop_toBottomOf="@id/imgDish2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Totales -->
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: $0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/swTip"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
